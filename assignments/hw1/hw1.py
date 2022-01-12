@@ -44,8 +44,8 @@ def kilometers_to_miles():
 
 
 if __name__ == '__main__':
-    # calc_rec_area()
-    # calc_volume()
-    # shooting_percentage()
-    # coffee()
+    calc_rec_area()
+    calc_volume()
+    shooting_percentage()
+    coffee()
     kilometers_to_miles()
