@@ -1,42 +1,64 @@
 """
-Name: <your name goes here – first and last>
-<ProgramName>.py
+Name: Alex Toscano
+hw5.py
 
-Problem: <Brief, one or two sentence description of the problem that this program solves, in your own words.>
+Problem:
 
 Certification of Authenticity:
-<include one of the following>
 I certify that this assignment is entirely my own work.
-I certify that this assignment is my own work, but I discussed it with: <Name(s)>
 """
 
 
 def name_reverse():
-    pass
+    name = input("enter a name(first last): ")
+    split = name.split()
+    print(split[1] + ", " + split[0])
 
 
 def company_name():
-    pass
+    domain = input("enter a domain: ")
+    split = domain.split(".")
+    print(split[1])
 
 
 def initials():
-    pass
+    num_stu = eval(input("how many students are in the class? "))
+    for i in range(num_stu):
+        name = input("what is the name of student " + str(i + 1) + "? ")
+        split = name.split()
+        print(split[0][0] + split[1][0])
 
 
 def names():
-    pass
+    name = input("enter a list of names: ")
+    split = name.split(", ")
+    for i in split:
+        initial = i.split()
+        print(initial[0][0] + initial[1][0], end=" ")
 
 
 def thirds():
-    pass
+    sentence = eval(input("enter the number of sentences: "))
+    for i in range(sentence):
+        sen = input("enter sentence " + str(i + 1) + ": ")
+        print(sen[::3])
 
 
 def word_average():
-    pass
+    sentence = input("enter a sentence: ")
+    split = sentence.split()
+    acc = 0
+    for i in split:
+        acc = acc + len(i)
+    print(acc/len(split))
 
 
 def pig_latin():
-    pass
+    latin = input("enter a sentence to convert to pig latin: ")
+    lower = latin.lower()
+    split = lower.split()
+    for i in split:
+        print(i[1:] + i[0] + "ay", end=" ".rstrip())
 
 
 if __name__ == '__main__':
@@ -46,5 +68,4 @@ if __name__ == '__main__':
     # names()
     # thirds()
     # word_average()
-    # pig_latin()
-    pass
+    pig_latin()
