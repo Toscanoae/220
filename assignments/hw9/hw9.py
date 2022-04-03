@@ -17,7 +17,7 @@ def get_words(file_name):
 
 
 def get_random_word(words):
-    word = words[randint(0, len(words)-1)]
+    word = words[randint(0, len(words) - 1)]
     return word.strip('\n')
 
 
@@ -68,8 +68,6 @@ def play_command_line(secret_word):
               + " the secret word was ", secret_word)
     else:
         print("winner!")
-
-
 
 
 if __name__ == '__main__':
